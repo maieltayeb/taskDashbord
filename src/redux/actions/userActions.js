@@ -5,11 +5,11 @@ import {GET_All_Users, Add_User} from '../reducers/userReducer'
 export const getAllUsers=function(){
     return function(dispatch){
         return (
-        axios.get('http://localhost:8000/users')
+        axios.get('https://maieltayeb.github.io/Data/data.json')
 
         .then((res)=>{
-        
-         const users=res.data;
+      
+         const users=res.data.users;
         
       
          dispatch(GET_All_Users(users)) 
@@ -32,7 +32,7 @@ export const getAllUsers=function(){
 export const addUser=function(newUser){
     return function(dispatch){
         return(
-            axios.post('http://localhost:8000/users',newUser)
+            axios.post('https://maieltayeb.github.io/Data/data.json',newUser)
             .then((res)=>{
             let user={...res.data}
           
