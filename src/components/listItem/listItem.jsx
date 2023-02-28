@@ -49,7 +49,7 @@ return (
    
   
    
-       <ListItem button onClick={handleClick} className={classes.itemText} key={item.itemText}>
+       <ListItem button onClick={handleClick} className={classes.itemText} key={item.id}>
        
         <ListItemText  primary={item.itemText} />
         {open ? <ExpandLess /> : <ExpandMore />}

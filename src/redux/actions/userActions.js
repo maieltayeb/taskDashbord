@@ -5,14 +5,21 @@ import {GET_All_Users, Add_User} from '../reducers/userReducer'
 export const getAllUsers=function(){
     return function(dispatch){
         return (
-        axios.get('https://maieltayeb.github.io/Data/data.json')
+        axios.get('https://dashbord-9926e-default-rtdb.firebaseio.com/users.json')
 
         .then((res)=>{
       
-         const users=res.data.users;
-        
+         const users=res.data;
       
-         dispatch(GET_All_Users(users)) 
+         let newUsers=[]
+         for (const key in users) {
+          
+            newUsers.push({id:key,...users[key]})
+           }
+        
+     //console.log("from dddd",newUsers);
+      
+         dispatch(GET_All_Users(newUsers)) 
     
     
         })
@@ -32,14 +39,15 @@ export const getAllUsers=function(){
 export const addUser=function(newUser){
     return function(dispatch){
         return(
-            axios.post('https://maieltayeb.github.io/Data/data.json',newUser)
+            axios.post('https://dashbord-9926e-default-rtdb.firebaseio.com/users.json',newUser)
             .then((res)=>{
-            let user={...res.data}
+
+                const id=res.data.name;
+                if(res.status===200){
+                 dispatch(Add_User({...newUser,id}))
+                  
+                }
           
-           if(res.status===201){
-            dispatch(Add_User(user))
-             
-           }
   
             })
             .catch((err)=>{

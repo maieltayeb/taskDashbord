@@ -64,27 +64,24 @@ function SimpleDialog(props) {
   const [userGroupId, setUserGroupId] = useState(1);
   const [userStatusId, setUserStatusId] = useState(1);
   const [groups, setGroups] = useState([]);
-  const [statuses, setStatuses] = useState([]);
+  
   const [createdOn, setCreatedOn] = useState(format(new Date(), " MMM dd,Y  "));
 
   useEffect(() => {
     async function getGroups() {
-      const response = await fetch("http://localhost:8000/groups");
+      const response = await fetch("https://dashbord-9926e-default-rtdb.firebaseio.com/groups.json");
       const groups = await response.json();
-      setGroups(groups);
+      let newGroups=[]
+      for (const key in groups) {
+          
+        newGroups.push({id:key,...groups[key]})
+       }
+      setGroups(newGroups);
     }
 
     getGroups();
   }, []);
-  useEffect(() => {
-    async function getStatus() {
-      const response = await fetch("http://localhost:8000/statuses");
-      const statues = await response.json();
-      setStatuses(statues);
-    }
-
-    getStatus();
-  }, []);
+ 
 
   const handelOnChangeName = (e) => {
     setName(e.target.value);
@@ -104,7 +101,7 @@ function SimpleDialog(props) {
   const handelAddUser = async(e) => {
     try{
     if ( name && userName &&emailAddress && userGroupId && userStatusId && createdOn ) {
-    await  dispatch(addUser({ name,userName,emailAddress,userGroupId,userStatusId,createdOn}))
+    await dispatch( addUser({ name,userName,emailAddress,userGroupId,userStatusId,createdOn}))
    handelRestFields()
    handleClose()
     }}

@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      
       "name": "Ahmed Mohamed",
       "userName": "ahmedM",
       "emailAddress": "ahmedM@gmail.com",
@@ -10,7 +10,7 @@
       "createdOn": "14-11-2020"
     },
     {
-      "id": 2,
+      
       "name": "Mohamed Ahmed",
       "userName": "ahmedM",
       "emailAddress": "mohamedA@gmail.com",
@@ -19,7 +19,7 @@
       "createdOn": "14-11-2020"
     },
     {
-      "id": 3,
+      
       "name": "Mostfa abdo",
       "userName": "mostafaM",
       "emailAddress": "mostafaM@gmail.com",
@@ -28,7 +28,7 @@
       "createdOn": "14-11-2020"
     },
     {
-      "id": 4,
+      
       "name": "Sara Ahmed",
       "userName": "saraM",
       "emailAddress": "saraM@gmail.com",
@@ -37,7 +37,7 @@
       "createdOn": "14-11-2020"
     },
     {
-      "id": 5,
+      
       "name": "Yasser Mohamed",
       "userName": "yasserM",
       "emailAddress": "yasserM@gmail.com",
@@ -46,7 +46,7 @@
       "createdOn": "14-11-2020"
     },
     {
-      "id": 6,
+      
       "name": "Eslam Mohamed",
       "userName": "eslamM",
       "emailAddress": "eslamM@gmail.com",
@@ -55,7 +55,7 @@
       "createdOn": "14-11-2020"
     },
     {
-      "id": 7,
+      
       "name": "fares Mohamed",
       "userName": "faresM",
       "emailAddress": "faresM@gmail.com",
@@ -64,7 +64,7 @@
       "createdOn": "14-11-2020"
     },
     {
-      "id": 8,
+      
       "name": "wafaa Mohamed",
       "userName": "wafaaM",
       "emailAddress": "wafaaM@gmail.com",
@@ -73,7 +73,7 @@
       "createdOn": "14-11-2020"
     },
     {
-      "id": 9,
+      
       "name": "DoaaMohamed",
       "userName": "DoaaM",
       "emailAddress": "DoaaM@gmail.com",
@@ -82,7 +82,7 @@
       "createdOn": "14-11-2020"
     },
     {
-      "id": 10,
+      
       "name": "Mahmoud",
       "userName": "Mahmoud",
       "emailAddress": "Mahmoud@gmail.com",
@@ -96,8 +96,8 @@
       "emailAddress": "mhbmjgj",
       "userGroupId": 2,
       "userStatusId": 1,
-      "createdOn": " Jan 13,2023  ",
-      "id": 11
+      "createdOn": " Jan 13,2023  "
+      
     },
     {
       "name": "test",
@@ -105,35 +105,35 @@
       "emailAddress": "jhbjh@fchfh.com",
       "userGroupId": 1,
       "userStatusId": 1,
-      "createdOn": " Jan 13,2023  ",
-      "id": 12
+      "createdOn": " Jan 13,2023  "
+      
     }
   ],
   "groups": [
     {
-      "id": 1,
+      
       "groupName": "office"
     },
     {
-      "id": 2,
+      
       "groupName": "Manngers"
     },
     {
-      "id": 3,
+      
       "groupName": "Head Office"
     }
   ],
   "statuses": [
     {
-      "id": 1,
+      
       "statusName": "Active"
     },
     {
-      "id": 2,
+      
       "statusName": "Locked"
     },
     {
-      "id": 3,
+      
       "statusName": "Inactive"
     }
   ]

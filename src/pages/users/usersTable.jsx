@@ -161,9 +161,14 @@ useEffect(()=>{
 
   useEffect(()=>{
     async function getGroups(){
-      const response=  await fetch("http://localhost:8000/groups")
+      const response=  await fetch("https://dashbord-9926e-default-rtdb.firebaseio.com/groups.json")
       const groups =await response.json();
-      setGroups(groups)
+      let newGroups=[]
+      for (const key in groups) {
+       
+        newGroups.push({id:key,...groups[key]})
+        }
+      setGroups(newGroups)
     }
    
     getGroups()
@@ -173,9 +178,15 @@ useEffect(()=>{
   },[])
   useEffect(()=>{
     async function getStatus(){
-      const response=  await fetch("http://localhost:8000/statuses")
+      const response=  await fetch("https://dashbord-9926e-default-rtdb.firebaseio.com/statuses.json")
       const statues =await response.json();
-      setStatuses(statues)
+      let newStatues=[]
+      for (const key in statues) {
+       
+        newStatues.push({id:key,...statues[key]})
+        }
+     
+      setStatuses(newStatues)
     }
    
     getStatus()

@@ -113,6 +113,7 @@ const useSearchStyles = makeStyles((theme) => ({
 export default function Layout({ children }) {
   const mySettingList = [
     {
+      id:1,
       itemText: "ATM Settings",
       nestedItems: [
         {
@@ -131,6 +132,7 @@ export default function Layout({ children }) {
     },
 
     {
+      id:2,
       itemText: "Bussiness Setup",
       nestedItems: [
         {
@@ -149,6 +151,7 @@ export default function Layout({ children }) {
     },
 
     {
+      id:3,
       itemText: "Users Management",
       nestedItems: [
         {
@@ -244,7 +247,7 @@ export default function Layout({ children }) {
           }
         >
           {settingList?.map((ele) => (
-            <MainListItem item={ele} />
+            <MainListItem item={ele} key={ele.id} />
           ))}
         </List>
 
